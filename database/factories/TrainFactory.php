@@ -17,15 +17,15 @@ class TrainFactory extends Factory
     public function definition()
     {
         return [
-            'azienda'  => fake()->words(10),
+            'azienda'  => fake()->randomElement(['Trenitalia', 'Eurostar', 'Frecciarossa', 'Flixtrein']),
             'stazione di partenza'  => fake()->city(),
             'stazione di arrivo'  => fake()->city(),
             'orario di partenza' => fake()->time(),
             'orario di arrivo' => fake()->time(),
-            'codice treno' => fake()->unique()->randomNumber(5, true),
-            'numero di carrozze' => fake()->nullable()->numberBetween(7, 20),
-            'in orario' => fake()->default(true)->boolean(),
-            'cancellato' => fake()->default(false)->boolean(),
+            'codice treno' => fake()->randomNumber(5, true),
+            'numero di carrozze' => fake()->numberBetween(7, 20),
+            'in orario' => fake()->boolean(),
+            'cancellato' => fake()->boolean(),
         ];
     }
 }
