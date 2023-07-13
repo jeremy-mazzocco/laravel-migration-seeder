@@ -17,7 +17,13 @@
 
 <body>
 
-   ciao
+    <ul>
+        @foreach ($trains as $tr)
+            <li>
+                {{ $tr->azienda }}
+            </li>
+        @endforeach
+    </ul>
 
 </body>
 
