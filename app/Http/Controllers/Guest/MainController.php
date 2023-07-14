@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers\Guest;
 
-use App\http\Controllers\Controller;
+use app\http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Train;

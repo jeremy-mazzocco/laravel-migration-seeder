@@ -18,13 +18,13 @@ class TrainFactory extends Factory
     {
         return [
             'azienda'  => fake()->randomElement(['Trenitalia', 'Eurostar', 'Frecciarossa', 'Flixtrein']),
-            'stazione di partenza'  => fake()->city(),
-            'stazione di arrivo'  => fake()->city(),
-            'orario di partenza' => fake()->time(),
-            'orario di arrivo' => fake()->time(),
-            'codice treno' => fake()->randomNumber(5, true),
-            'numero di carrozze' => fake()->numberBetween(7, 20),
-            'in orario' => fake()->boolean(),
+            'stazione_di_partenza'  => fake()->city(),
+            'stazione_di_arrivo'  => fake()->city(),
+            'orario_di_partenza' => fake()->time(),
+            'orario_di_arrivo' => fake()->dateTimeBetween('-1 day', '+1 day'),
+            'codice_treno' => fake()->randomNumber(5, true),
+            'numero_di_carrozze' => fake()->numberBetween(7, 20),
+            'in_orario' => fake()->boolean(),
             'cancellato' => fake()->boolean(),
         ];
     }
